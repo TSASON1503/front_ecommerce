@@ -14,7 +14,7 @@ import {
 /* FOR ADDING PRODUCTS TO CART */
 export const addToCart = (id, qty) => async (dispatch, getState) => {
   // FETCHING PRODUCT DATA
-  const { data } = await axios.get(`/api/products/${id}`);
+  const { data } = await axios.get(`https://back-com.onrender.com/api/products/${id}`);
 
   dispatch({
     type: CART_ADD_ITEM,
