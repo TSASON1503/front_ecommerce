@@ -19,7 +19,7 @@ function Product({ product }) {
        }}>
       <Link to={`/product/${product._id}`}>
         <Card.Img
-          src={product.image}
+          src={`https://back-com.onrender.com${product.image}`}
           style={{ height: "200px", objectFit: "cover" }}
         />
       </Link>
