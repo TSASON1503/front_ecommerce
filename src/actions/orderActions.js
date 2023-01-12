@@ -209,7 +209,7 @@ export const listOrders = () => async (dispatch, getState) => {
     };
 
     /* MAKING API CALL TO GET THE DETAILS OF ALL THE ORDERS MADE BY THE ALL THE USERS */
-    const { data } = await axios.get(`/api/orders/`, config);
+    const { data } = await axios.get(`https://back-com.onrender.com/api/orders/`, config);
 
     /* IF GET REQUEST SUCCESSFULL WE DISPATCH & SEND THE PAYLOAD TO OUR REDUCER */
     dispatch({
