@@ -67,7 +67,7 @@ function CartScreen({ match, location, history }) {
               <ListGroup.Item key={item.product}>
                 <Row>
                   <Col md={2}>
-                    <Image src={`https://back-com.onrender.com${product.image}`} alt={item.name} fluid rounded />
+                    <Image src={`https://back-com.onrender.com${productId.image}`} alt={item.name} fluid rounded />
                   </Col>
 
                   <Col m={3}>
