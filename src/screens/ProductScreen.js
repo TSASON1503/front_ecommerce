@@ -91,7 +91,7 @@ function ProductScreen({ match, history }) {
         <div>
           <Row>
             <Col md={6}>
-              <Image src={`https://back-com.onrender.com${`{productid.image}`} alt={product.name} fluid />
+              <Image src={`https://back-com.onrender.com${product.image}`} alt={product.name} fluid />
 
               <ListGroup variant="flush">
                 <ListGroup.Item>
@@ -101,7 +101,7 @@ function ProductScreen({ match, history }) {
                 <ListGroup.Item>
                   <Rating
                     value={product.rating}
-                    text={`{product.numReviews} reviews`}
+                    text={`${product.numReviews} reviews`}
                     color={"#f8e825"}
                   />
                 </ListGroup.Item>
