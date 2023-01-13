@@ -45,7 +45,7 @@ export const createOrder = (order) => async (dispatch, getState) => {
     };
 
     /* MAKING API CALL TO SAVE THE ORDER DETAILS */
-    const { data } = await axios.post(`https://back-com.onrender.com/api/orders/add/`, order, config);
+    const { data } = await axios.post(`https://back-com.onrender.com//api//orders//add//`, order, config);
 
     /* IF PUT REQUEST SUCCESSFULL WE DISPATCH & SEND THE PAYLOAD TO OUR REDUCER */
     dispatch({
@@ -91,7 +91,7 @@ export const getOrderDetails = (id) => async (dispatch, getState) => {
     };
 
     /* MAKING API CALL TO GET THE ORDER DETAILS */
-    const { data } = await axios.get(`https://back-com.onrender.com/api/orders/${id}/`, config);
+    const { data } = await axios.get(`https://back-com.onrender.com//api//orders//${id}//`, config);
 
     /* IF GET REQUEST SUCCESSFULL WE DISPATCH & SEND THE PAYLOAD TO OUR REDUCER */
     dispatch({
@@ -130,7 +130,7 @@ export const payOrder = (id, paymentResult) => async (dispatch, getState) => {
 
     /* MAKING API CALL TO SAVE THE PAYMENT DETAILS */
     const { data } = await axios.put(
-      `https://back-com.onrender.com/api/orders/${id}/pay/`,
+      `https://back-com.onrender.com//api//orders//${id}//pay//`,
       paymentResult,
       config
     );
@@ -171,7 +171,7 @@ export const listMyOrders = () => async (dispatch, getState) => {
     };
 
     /* MAKING API CALL TO GET THE DETAILS OF THE ORDERS MADE BY THE USER */
-    const { data } = await axios.get(`https://back-com.onrender.com/api/orders/myorders/`, config);
+    const { data } = await axios.get(`https://back-com.onrender.com//api//orders//myorders//`, config);
 
     /* IF GET REQUEST SUCCESSFULL WE DISPATCH & SEND THE PAYLOAD TO OUR REDUCER */
     dispatch({
@@ -209,7 +209,7 @@ export const listOrders = () => async (dispatch, getState) => {
     };
 
     /* MAKING API CALL TO GET THE DETAILS OF ALL THE ORDERS MADE BY THE ALL THE USERS */
-    const { data } = await axios.get(`https://back-com.onrender.com/api/orders/`, config);
+    const { data } = await axios.get(`https://back-com.onrender.com//api//orders//`, config);
 
     /* IF GET REQUEST SUCCESSFULL WE DISPATCH & SEND THE PAYLOAD TO OUR REDUCER */
     dispatch({
@@ -248,7 +248,7 @@ export const deliverOrder = (order) => async (dispatch, getState) => {
 
     /* MAKING API CALL TO UPDATE ORDER DELIVERY STATUS */
     const { data } = await axios.put(
-      `https://back-com.onrender.com/api/orders/${order._id}/deliver/`,
+      `https://back-com.onrender.com//api//orders//${order._id}//deliver//`,
       {},
       config
     );
