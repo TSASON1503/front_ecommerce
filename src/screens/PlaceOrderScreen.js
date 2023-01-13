@@ -116,7 +116,7 @@ function PlaceOrderScreen({ history }) {
                       <Row>
                         <Col md={1}>
                           <Image
-                            src={`https://back-com.onrender.com${item.image}/`}
+                            src={`https://back-com.onrender.com//${item.image}//`}
                             alt={item.name}
                             fluid
                             rounded
