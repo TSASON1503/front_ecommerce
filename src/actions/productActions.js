@@ -41,7 +41,7 @@ export const listProducts =
         type: PRODUCT_LIST_REQUEST,
       });
 
-      const { data } = await axios.get(`https://back-com.onrender.com/api/products/${keyword}/`);
+      const { data } = await axios.get(`https://back-com.onrender.com/api/products${keyword}`);
 
       dispatch({
         type: PRODUCT_LIST_SUCCESS,
@@ -65,7 +65,7 @@ export const listProductDetails = (id) => async (dispatch) => {
       type: PRODUCT_DETAILS_REQUEST,
     });
 
-    const { data } = await axios.get(`https://back-com.onrender.com/api/products/${id}/`);
+    const { data } = await axios.get(`https://back-com.onrender.com/api/products/${id}`);
 
     dispatch({
       type: PRODUCT_DETAILS_SUCCESS,
@@ -103,7 +103,7 @@ export const deleteProduct = (id) => async (dispatch, getState) => {
 
     /* MAKING API CALL TO DELETE PRODUCT */
     // eslint-disable-next-line
-    const { data } = await axios.delete(`https://back-com.onrender.com/api/products/delete/${id}/`, config);
+    const { data } = await axios.delete(`https://back-com.onrender.com/api/products/delete/${id}`, config);
 
     /* IF GET REQUEST SUCCESSFULL WE DISPATCH & SEND THE PAYLOAD TO OUR REDUCER */
     dispatch({
