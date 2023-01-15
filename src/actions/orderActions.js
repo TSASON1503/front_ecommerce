@@ -91,7 +91,7 @@ export const getOrderDetails = (id) => async (dispatch, getState) => {
     };
 
     /* MAKING API CALL TO GET THE ORDER DETAILS */
-    const { data } = await axios.get(`https://back-com.onrender.com/api/orders/${id}/`, config);
+    const { data } = await axios.get(`https://back-com.onrender.com/api/orders/${id}`, config);
 
     /* IF GET REQUEST SUCCESSFULL WE DISPATCH & SEND THE PAYLOAD TO OUR REDUCER */
     dispatch({
