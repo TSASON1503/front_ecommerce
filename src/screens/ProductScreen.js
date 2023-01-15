@@ -91,7 +91,7 @@ function ProductScreen({ match, history }) {
         <div>
           <Row>
             <Col md={6}>
-              <Image src={`https://back-com.onrender.com${product.image}/`} alt={product.name} fluid />
+              <Image src={`https://back-com.onrender.com/${product.image}/`} alt={product.name} fluid />
 
               <ListGroup variant="flush">
                 <ListGroup.Item>
