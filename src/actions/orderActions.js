@@ -130,7 +130,7 @@ export const payOrder = (id, paymentResult) => async (dispatch, getState) => {
 
     /* MAKING API CALL TO SAVE THE PAYMENT DETAILS */
     const { data } = await axios.put(
-      `https://back-com.onrender.com//api/orders/${id}/pay/`,
+      `https://back-com.onrender.com/api/orders/${id}/pay/`,
       paymentResult,
       config
     );
